@@ -1,0 +1,1 @@
+{"Name":"sessions System","Description":"Analyse sécurisée du système","Domains":[{"Name":"core","Keywords":["core","main","service"]},{"Name":"ui","Keywords":["component","interface","ui"]}],"CriticalFiles":["src/main/index.ts"],"RiskFactors":["System integration","Data consistency"]}

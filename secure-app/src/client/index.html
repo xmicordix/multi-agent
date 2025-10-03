@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Secure Universal Analysis 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .security-badge {
+            display: inline-block;
+            background: rgba(39, 174, 96, 0.8);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        .config-panel, .execution-panel {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #e9ecef;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .btn-success {
+            background: #27ae60;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #229954;
+            transform: translateY(-2px);
+        }
+
+        .btn-danger {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .status-disconnected {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .status-connected {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-executing {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .progress-container {
+            margin: 20px 0;
+            display: none;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 12px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .results-area {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 1.6;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            margin-top: 20px;
+        }
+
+        .security-features {
+            background: #e8f5e8;
+            border: 1px solid #27ae60;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .security-features h4 {
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+
+        .security-features ul {
+            margin-left: 20px;
+        }
+
+        .security-features li {
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Secure Universal Analysis 2025</h1>
+            <p>Analyse sécurisée avec Deno Runtime + Sandbox</p>
+            <div class="security-badge">🔒 Sécurisé par défaut • Permissions explicites • Timeout automatique</div>
+        </div>
+
+        <div class="main-content">
+            <!-- Panel de Configuration -->
+            <div class="config-panel">
+                <h2 class="section-title">⚙️ Configuration Sécurisée</h2>
+
+                <div class="security-features">
+                    <h4>🛡️ Fonctionnalités de Sécurité</h4>
+                    <ul>
+                        <li>✅ Sandbox Deno avec permissions explicites</li>
+                        <li>✅ Validation stricte des entrées</li>
+                        <li>✅ Timeout automatique (max 60min)</li>
+                        <li>✅ Execution PowerShell contrôlée</li>
+                        <li>✅ Logs détaillés et monitoring</li>
+                    </ul>
+                </div>
+
+                <div class="form-group">
+                    <label for="systemName">Système à Analyser</label>
+                    <select id="systemName">
+                        <option value="sessions">🔐 Sessions Management</option>
+                        <option value="projects">📁 Project Management</option>
+                        <option value="ui-components">🎨 UI Components</option>
+                        <option value="database">🗄️ Database System</option>
+                        <option value="claude-integration">🤖 Claude Integration</option>
+                    </select>
+                </div>
+
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label for="maxSessions">Sessions Parallèles</label>
+                        <input type="number" id="maxSessions" value="2" min="1" max="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="timeoutMinutes">Timeout (minutes)</label>
+                        <input type="number" id="timeoutMinutes" value="5" min="1" max="30">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="dryRun" style="width: auto; margin-right: 8px;">
+                        Mode Test (simulation seulement)
+                    </label>
+                </div>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="btn btn-primary" onclick="testConnection()" id="testBtn">
+                        🔗 Tester Connexion
+                    </button>
+                    <button class="btn btn-success" onclick="startSecureAnalysis()" id="analyzeBtn" disabled>
+                        🚀 Démarrer Analyse
+                    </button>
+                    <button class="btn btn-danger" onclick="stopAnalysis()" id="stopBtn" disabled>
+                        🛑 Arrêter
+                    </button>
+                </div>
+            </div>
+
+            <!-- Panel d'Exécution -->
+            <div class="execution-panel">
+                <h2 class="section-title">📊 Exécution & Monitoring</h2>
+
+                <div id="connectionStatus" class="status-indicator status-disconnected">
+                    <span>🔴</span>
+                    <span>Déconnecté du serveur Deno</span>
+                </div>
+
+                <div class="progress-container" id="progressContainer">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                        <div class="progress-text" id="progressText">0%</div>
+                    </div>
+                    <div style="margin-top: 10px; font-size: 14px;" id="progressDetails">
+                        Initialisation...
+                    </div>
+                </div>
+
+                <div class="results-area" id="results">
+                    Secure Universal Analysis 2025 - Prêt
+
+🔒 Fonctionnalités de sécurité activées:
+   • Sandbox Deno Runtime
+   • Validation des entrées
+   • Timeout automatique
+   • Permissions explicites
+
+👆 Cliquez sur "Tester Connexion" pour commencer
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const SERVER_URL = 'http://localhost:8080';
+        let isConnected = false;
+        let currentAnalysis = null;
+
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const results = document.getElementById('results');
+            const prefix = type === 'error' ? '❌' : type === 'success' ? '✅' : type === 'warning' ? '⚠️' : '📝';
+            results.textContent += `\\n[${timestamp}] ${prefix} ${message}`;
+            results.scrollTop = results.scrollHeight;
+        }
+
+        function updateConnectionStatus(connected, message) {
+            const status = document.getElementById('connectionStatus');
+            if (connected) {
+                status.className = 'status-indicator status-connected';
+                status.innerHTML = '<span>🟢</span><span>Connecté au serveur Deno</span>';
+                document.getElementById('analyzeBtn').disabled = false;
+            } else {
+                status.className = 'status-indicator status-disconnected';
+                status.innerHTML = `<span>🔴</span><span>${message || 'Déconnecté du serveur Deno'}</span>`;
+                document.getElementById('analyzeBtn').disabled = true;
+            }
+            isConnected = connected;
+        }
+
+        function updateProgress(percent, details) {
+            const container = document.getElementById('progressContainer');
+            const fill = document.getElementById('progressFill');
+            const text = document.getElementById('progressText');
+            const detailsEl = document.getElementById('progressDetails');
+
+            container.style.display = 'block';
+            fill.style.width = `${percent}%`;
+            text.textContent = `${percent}%`;
+            detailsEl.textContent = details;
+
+            if (percent >= 100) {
+                setTimeout(() => {
+                    container.style.display = 'none';
+                }, 2000);
+            }
+        }
+
+        async function testConnection() {
+            const testBtn = document.getElementById('testBtn');
+            testBtn.disabled = true;
+            testBtn.textContent = '🔄 Test...';
+
+            log('Test de connexion au serveur Deno sécurisé...');
+
+            try {
+                const response = await fetch(`${SERVER_URL}/api/health`);
+                const data = await response.json();
+
+                if (response.ok) {
+                    log(`Connexion réussie ! Runtime: ${data.runtime} v${data.version}`, 'success');
+                    updateConnectionStatus(true);
+                } else {
+                    throw new Error('Réponse serveur invalide');
+                }
+            } catch (error) {
+                log(`Échec de connexion: ${error.message}`, 'error');
+                log('💡 Vérifiez que le serveur Deno est démarré: start-secure-server.bat', 'warning');
+                updateConnectionStatus(false, 'Serveur inaccessible');
+            } finally {
+                testBtn.disabled = false;
+                testBtn.textContent = '🔗 Tester Connexion';
+            }
+        }
+
+        async function startSecureAnalysis() {
+            if (!isConnected) {
+                log('Erreur: Non connecté au serveur', 'error');
+                return;
+            }
+
+            const analyzeBtn = document.getElementById('analyzeBtn');
+            const stopBtn = document.getElementById('stopBtn');
+
+            analyzeBtn.disabled = true;
+            stopBtn.disabled = false;
+
+            const request = {
+                systemName: document.getElementById('systemName').value,
+                maxSessions: parseInt(document.getElementById('maxSessions').value),
+                timeoutMinutes: parseInt(document.getElementById('timeoutMinutes').value),
+                dryRun: document.getElementById('dryRun').checked,
+                config: JSON.stringify({
+                    Name: document.getElementById('systemName').value + ' System',
+                    Description: 'Analyse sécurisée du système',
+                    Domains: [
+                        { Name: 'core', Keywords: ['core', 'main', 'service'] },
+                        { Name: 'ui', Keywords: ['component', 'interface', 'ui'] }
+                    ],
+                    CriticalFiles: ['src/main/index.ts'],
+                    RiskFactors: ['System integration', 'Data consistency']
+                })
+            };
+
+            log(`🚀 Démarrage analyse sécurisée: ${request.systemName}`, 'info');
+            log(`⚙️ Configuration: ${request.maxSessions} sessions, ${request.timeoutMinutes}min, test: ${request.dryRun}`);
+
+            updateProgress(10, 'Envoi de la requête au serveur Deno...');
+
+            try {
+                const response = await fetch(`${SERVER_URL}/api/analyze`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(request)
+                });
+
+                updateProgress(25, 'Réponse serveur reçue, traitement...');
+
+                const result = await response.json();
+
+                if (result.success) {
+                    updateProgress(100, 'Analyse terminée avec succès!');
+                    log(`✅ Analyse terminée en ${result.executionTime}ms`, 'success');
+                    log(`📊 Sortie:\\n${result.output}`, 'info');
+                } else {
+                    updateProgress(100, 'Analyse échouée');
+                    log(`❌ Erreur d'analyse: ${result.error}`, 'error');
+                }
+
+            } catch (error) {
+                updateProgress(100, 'Erreur de communication');
+                log(`❌ Erreur de communication: ${error.message}`, 'error');
+            } finally {
+                analyzeBtn.disabled = false;
+                stopBtn.disabled = true;
+            }
+        }
+
+        function stopAnalysis() {
+            log('🛑 Arrêt de l\'analyse demandé', 'warning');
+            // TODO: Implémenter l'arrêt via API
+            document.getElementById('analyzeBtn').disabled = false;
+            document.getElementById('stopBtn').disabled = true;
+        }
+
+        // Configuration dynamique
+        let appConfig = null;
+
+        async function loadConfiguration() {
+            try {
+                const response = await fetch(`${SERVER_URL}/api/config`);
+                appConfig = await response.json();
+
+                log(`📋 Configuration loaded: ${appConfig.name} v${appConfig.version}`);
+
+                // Populate systems dropdown dynamically
+                populateSystemsDropdown();
+
+                // Set dynamic limits
+                setDynamicLimits();
+
+                return true;
+            } catch (error) {
+                log(`❌ Failed to load configuration: ${error.message}`, 'error');
+                return false;
+            }
+        }
+
+        function populateSystemsDropdown() {
+            const systemSelect = document.getElementById('systemName');
+            systemSelect.innerHTML = '';
+
+            if (appConfig && appConfig.analysis && appConfig.analysis.systems) {
+                appConfig.analysis.systems.forEach(system => {
+                    const option = document.createElement('option');
+                    option.value = system.id;
+                    option.textContent = `${system.icon} ${system.name}`;
+                    option.title = system.description;
+                    systemSelect.appendChild(option);
+                });
+            }
+        }
+
+        function setDynamicLimits() {
+            if (appConfig && appConfig.security) {
+                const maxSessionsInput = document.getElementById('maxSessions');
+                const timeoutInput = document.getElementById('timeoutMinutes');
+
+                // Set limits from configuration
+                maxSessionsInput.min = appConfig.security.maxSessions.min;
+                maxSessionsInput.max = appConfig.security.maxSessions.max;
+                maxSessionsInput.value = appConfig.security.maxSessions.default;
+
+                timeoutInput.min = appConfig.security.timeout.min;
+                timeoutInput.max = appConfig.security.timeout.max;
+                timeoutInput.value = appConfig.security.timeout.default;
+
+                log(`⚙️ Dynamic limits set: Sessions(${appConfig.security.maxSessions.min}-${appConfig.security.maxSessions.max}), Timeout(${appConfig.security.timeout.min}-${appConfig.security.timeout.max} ${appConfig.security.timeout.unit})`);
+            }
+        }
+
+        // Professional initialization sequence
+        document.addEventListener('DOMContentLoaded', async () => {
+            log('🚀 Professional Security Interface - Initializing...');
+
+            // Load configuration first
+            const configLoaded = await loadConfiguration();
+
+            if (configLoaded) {
+                log('✅ Configuration loaded successfully');
+                // Test connection after config is loaded
+                setTimeout(testConnection, 1000);
+            } else {
+                log('⚠️ Running with default configuration', 'warning');
+                // Still try to connect even without config
+                setTimeout(testConnection, 2000);
+            }
+        });
+    </script>
+</body>
+</html>
